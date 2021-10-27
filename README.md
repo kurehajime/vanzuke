@@ -1,1 +1,1 @@
-# banzuke
+# vanzuke

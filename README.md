@@ -1,5 +1,24 @@
-# vanzuke
+# README
 
-こういうの作る。
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-https://docs.google.com/presentation/d/1zp7DvEoDjlBYJ64dO3AkFvGzoUbaOyhrRNea8svIyH8/edit?usp=sharing
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

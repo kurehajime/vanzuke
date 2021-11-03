@@ -7,8 +7,14 @@ class GithubTest < ActionDispatch::IntegrationTest
 
   test "get stats contributors" do
     t = Temp.new
-    authors = t.get_stats_contributors("kurehajime","vanzuke")
+
+    # All contributions => 0
+    authors = t.get_stats_contributors_ago("kurehajime","vanzuke",0)
     assert (authors.count >= 0)
+
+    # Only future contributions == 0 
+    authors = t.get_stats_contributors_ago("kurehajime","vanzuke",-1000000000)
+    assert (authors.count == 0)
   end
 
 end

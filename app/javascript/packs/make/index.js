@@ -1,21 +1,18 @@
 function makeURL(e) {
-    const yyyymmdd = document.querySelector('#yyyymmdd').value.replace(/-/g, "")
-    const user = document.querySelector('#user').value
     const repo = document.querySelector('#repo').value
-    const path = encodeURIComponent(document.querySelector('#path').value)
-    const branch = encodeURIComponent(document.querySelector('#branch').value)
+    const count = document.querySelector('#count').value
+    const years = document.querySelector('#years').value
+    const monthes = document.querySelector('#monthes').value
+    const days = document.querySelector('#days').value
+
     let url = location.protocol + "//" + location.host
-        + `?yyyymmdd=${yyyymmdd}`
-        + `&user=${user}`
-        + `&repo=${repo}`
-    if (path) {
-        url += `&path=${path}`
-    }
-    if (branch) {
-        url += `&branch=${branch}`
-    }
+        + `?repo=${repo}`
+        + `&count=${count}`
+        + `&years=${years}`
+        + `&monthes=${monthes}`
+        + `&days=${days}`
     document.querySelector('#result').value = url
-    document.querySelector('#result_tag').value = `![sendokun](${url})`
+    document.querySelector('#result_tag').value = `![vanzuke](${url})`
 }
 function copyText(id) {
     const copyTarget = document.getElementById(id);

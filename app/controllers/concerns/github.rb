@@ -5,12 +5,7 @@ module Github
   extend ActiveSupport::Concern
   Author = Struct.new(:name, :total,:modify)
   
-  def get_stats_contributors_ago(user,repo,time_ago = 0)
-    if time_ago != 0 then
-      start_time = Time.now.to_i - time_ago
-    else
-      start_time = 0
-    end
+  def get_stats_contributors_ago(user,repo,start_time = 0)
     res_data = api_stats_contributors(user,repo)
     res_data.map do |commits|
       name = commits["author"]["login"]

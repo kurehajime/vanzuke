@@ -13,7 +13,7 @@ class GithubTest < ActionDispatch::IntegrationTest
     assert (authors.count >= 0)
 
     # Only future contributions == 0 
-    authors = t.get_stats_contributors_ago("kurehajime","vanzuke",-1000000000)
+    authors = t.get_stats_contributors_ago("kurehajime","vanzuke",Time.now.to_i + 1000000000)
     assert (authors.count == 0)
   end
 

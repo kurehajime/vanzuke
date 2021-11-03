@@ -1,0 +1,31 @@
+<form class="grid grid-cols-1 gap-6 m-16" >
+    <h1 class="text-5xl text-blue-500 text-center font-black col-span-1">Vanzuke</h1>
+    <p class="col-span-1">
+Contributor ranking for your Github repository that can be displayed in README.md.
+    </p>
+    <label for="repo" class="lbl">Repository :
+        <div w-full>
+            <b>https://github.com/</b><input type="text" name="repo" id="repo" placeholder="kurehajime/vanzuke" class="rounded">
+        </div>
+        <span class="description text-xs">
+    </label>
+    <input type="button" id="make" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" value="Generate" class="w-full">
+    <label for="result" class="lbl">image URL :
+        <div class="relative w-full">
+            <input type="text"  name="result" id="result" class="h-14 w-96  pr-20 rounded-lg z-0 w-full bg-gray-100" readonly>
+            <div class="absolute top-2 right-2"> 
+                <button type="button" id="copy_result" class="h-10 w-20 rounded-lg bg-white border">📋</button>
+            </div>
+        </div>
+    </label>
+    <label for="result_tag" class="lbl">Markdown Tag :
+        <div class="relative w-full">
+            <input type="text"  name="result_tag" id="result_tag" class="h-14 w-96  pr-20 rounded-lg z-0 w-full bg-gray-100" readonly>
+            <div class="absolute top-2 right-2">
+                <button type="button" id="copy_result_tag" class="h-10 w-20 rounded-lg bg-white border">📋</button>
+            </div>
+        </div>
+    </label>
+</form>
+
+<%= javascript_pack_tag 'make/index' %>

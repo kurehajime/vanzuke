@@ -1,0 +1,11 @@
+<html>
+<body>
+<%= @title %>
+<% @contributors.each do |contributor| %>
+    <%= contributor.name %>,
+    <%= contributor.modify %>,
+    <%= contributor.total %>
+    <br>
+<% end %>
+</body>
+</html>

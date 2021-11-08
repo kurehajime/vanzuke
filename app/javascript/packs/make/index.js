@@ -4,6 +4,7 @@ function makeURL(e) {
     const years = document.querySelector('#years').value
     const monthes = document.querySelector('#monthes').value
     const days = document.querySelector('#days').value
+    const title = encodeURI(document.querySelector('#title').value)
 
     let url = location.protocol + "//" + location.host
         + `?repo=${repo}`
@@ -11,6 +12,7 @@ function makeURL(e) {
         + `&years=${years}`
         + `&monthes=${monthes}`
         + `&days=${days}`
+        + `&title=${title}`
     document.querySelector('#result').value = url
     document.querySelector('#result_tag').value = `![vanzuke](${url})`
 }

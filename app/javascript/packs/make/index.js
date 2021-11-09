@@ -2,7 +2,7 @@ function makeURL(e) {
     const repo = document.querySelector('#repo').value
     const count = document.querySelector('#count').value
     const years = document.querySelector('#years').value
-    const monthes = document.querySelector('#monthes').value
+    const month = document.querySelector('#month').value
     const days = document.querySelector('#days').value
     const title = encodeURI(document.querySelector('#title').value)
 
@@ -10,7 +10,7 @@ function makeURL(e) {
         + `?repo=${repo}`
         + `&count=${count}`
         + `&years=${years}`
-        + `&monthes=${monthes}`
+        + `&month=${month}`
         + `&days=${days}`
         + `&title=${title}`
     document.querySelector('#result').value = url

@@ -15,6 +15,7 @@ function makeURL(e) {
         + `&title=${title}`
     document.querySelector('#result').value = url
     document.querySelector('#result_tag').value = `![vanzuke](${url})`
+    document.querySelector('#preview').src = url
 }
 function copyText(id) {
     const copyTarget = document.getElementById(id);

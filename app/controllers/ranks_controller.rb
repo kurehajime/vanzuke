@@ -33,5 +33,6 @@ class RanksController < ApplicationController
                 row
             end
         end
+        render :layout => nil, content_type: "image/svg+xml", :disposition => "inline"
     end
 end

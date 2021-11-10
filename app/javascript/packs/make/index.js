@@ -7,7 +7,7 @@ function makeURL(e) {
     const title = encodeURI(document.querySelector('#title').value)
 
     let url = location.protocol + "//" + location.host
-        + `?repo=${repo}`
+        + `/ranks?repo=${repo}`
         + `&count=${count}`
         + `&years=${years}`
         + `&month=${month}`

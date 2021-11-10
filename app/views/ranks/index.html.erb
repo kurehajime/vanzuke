@@ -1,11 +1,15 @@
 <html>
 <body>
-<%= @title %>
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="300" height="<%= @height %>" fill="#fcfcfc"/>
+  <text x="150" y="15" text-anchor="middle" style="font-weight:bolder;"><%= @title %></text>
+  <line x1="10" y1="20" x2="290" y2="20" stroke="black" stroke-width="1" />
+
 <% @contributors.each do |contributor| %>
-    <%= contributor.name %>,
-    <%= contributor.modify %>,
-    <%= contributor.total %>
-    <br>
+  <text x="15" y="<%= contributor.y %>" text-anchor="start"><%= contributor.name %></text>
+  <text x="295"y="<%= contributor.y %>" text-anchor="end"><%= contributor.modify %></text>
 <% end %>
+</svg>
 </body>
 </html>

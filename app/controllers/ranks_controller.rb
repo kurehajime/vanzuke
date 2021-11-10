@@ -4,6 +4,8 @@ class RanksController < ApplicationController
     include Github
 
     def index
+        expires_now
+        @height = 20
         @contributors = []
         @title = params[:title]
         if params[:repo] 
@@ -19,6 +21,16 @@ class RanksController < ApplicationController
                 @contributors =  get_stats_contributors_ago(user,repo,day.to_i)
             else
                 @contributors =  get_stats_contributors_ago(user,repo,0)
+            end
+            @contributors = @contributors.
+                sort_by{|c|c.modify}.
+                reverse.
+                map do |c|
+                row = Struct.
+                    new(:name, :total,:modify,:y).
+                    new(c.name,c.total,c.modify,@height + 15)
+                @height += 20
+                row
             end
         end
     end

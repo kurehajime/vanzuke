@@ -5,6 +5,11 @@ function makeURL(e) {
     const month = document.querySelector('#month').value
     const days = document.querySelector('#days').value
     const title = encodeURI(document.querySelector('#title').value)
+    if (!repo) {
+        alert("Please Input Repository")
+        document.querySelector('#repo').select();
+        return;
+    }
 
     let url = location.protocol + "//" + location.host
         + `/ranks?repo=${repo}`
@@ -27,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#make').addEventListener('click', makeURL)
     document.querySelector('#copy_result').addEventListener('click', () => { copyText("result") })
     document.querySelector('#copy_result_tag').addEventListener('click', () => { copyText("result_tag") })
+    document.querySelector('#repo').select();
 });

@@ -10,4 +10,4 @@ this
 
 Let's try.
 
-https://vanzuke.herokuapp.com/make
+https://vanzuke.herokuapp.com

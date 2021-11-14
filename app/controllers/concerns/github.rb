@@ -24,6 +24,12 @@ module Github
 
   def api_stats_contributors(user,repo)
     uri = URI("https://api.github.com/repos/#{user}/#{repo}/stats/contributors")
+    # if ENV['GITHUB_CLIENT_ID'] && ENV['GITHUB_API_SECRET'] 
+    #   uri.query = {
+    #     client_id:ENV['GITHUB_API_ID'],
+    #     secret:ENV['GITHUB_API_SECRET'],
+    #   }.to_param
+    # end
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     req = Net::HTTP::Get.new(uri)

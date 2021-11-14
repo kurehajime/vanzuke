@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rails server",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "bin/rails",
+            "args": [
+                "server",
+                "-p",
+                "3000",
+                "-b",
+                "0.0.0.0"
+            ],
+            "showDebuggerOutput": true,
+            "useBundler": true,
+            "env": {
+                "WEB_CONCURRENCY": 0
+            }
+        }
+    ]
+}

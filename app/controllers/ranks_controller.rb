@@ -18,11 +18,11 @@ class RanksController < ApplicationController
                 day = day.ago(params[:years].to_i.years)  if params[:years]
                 day = day.ago(params[:month].to_i.month)  if params[:month]
                 day = day.ago(params[:days].to_i.days)  if params[:days]
-                p day
                 @contributors =  get_stats_contributors_ago(user,repo,day.to_i)
             else
                 @contributors =  get_stats_contributors_ago(user,repo,0)
             end
+
             @contributors = @contributors.
                 sort_by{|c|c.modify}.
                 reverse.

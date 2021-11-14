@@ -11,6 +11,7 @@ class RanksController < ApplicationController
         if params[:repo] 
             user = params[:repo].split("/")[0]
             repo = params[:repo].split("/")[1]
+            count = params[:count] || 5
             day = Time.now
 
             if params[:years] || params[:month] || params[:days] 
@@ -25,6 +26,7 @@ class RanksController < ApplicationController
             @contributors = @contributors.
                 sort_by{|c|c.modify}.
                 reverse.
+                first(count.to_i).
                 map do |c|
                 row = Struct.
                     new(:name, :total,:modify,:y).

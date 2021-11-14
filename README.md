@@ -1,24 +1,9 @@
-# README
+# vanzuke
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Contributor ranking for your Github repository that can be displayed in README.md.
 
-Things you may want to cover:
+--
 
-* Ruby version
+this
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![vanzuke](https://vanzuke.herokuapp.com/ranks?repo=kurehajime/colamone_js&count=5&years=1&month=0&days=0&title=%F0%9F%91%91Contributors%F0%9F%91%91)

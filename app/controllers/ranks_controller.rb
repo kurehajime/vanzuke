@@ -30,7 +30,7 @@ class RanksController < ApplicationController
                 map do |c|
                 row = Struct.
                     new(:name, :total,:modify,:y).
-                    new(c.name,c.total,c.modify,@height + 15)
+                    new(c.name,c.total,c.modify + "pt",@height + 15)
                 @height += 20
                 row
             end
